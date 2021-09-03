@@ -12,4 +12,7 @@ const displayTemperature = (data) => {
   document.getElementById("city").innerText = `${data.name}`;
   document.getElementById("temp").innerText = `${data.main.temp}`;
   document.getElementById("condition").innerText = `${data.weather[0].main}`;
+  const url = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  const imgIcon = document.getElementById("weather-icon");
+  imgIcon.setAttribute("src", url);
 };
